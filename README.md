@@ -4,4 +4,4 @@
 * Chance Payne
 * Erin Meredith
 * Leeroy Jenkins
-*Jason Tyzzer
+* Jason Tyzzer
