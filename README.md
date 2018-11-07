@@ -5,3 +5,4 @@
 * Erin Meredith
 * Leeroy Jenkins
 * Jacob Seppanen
+* Jason Tyzzer
