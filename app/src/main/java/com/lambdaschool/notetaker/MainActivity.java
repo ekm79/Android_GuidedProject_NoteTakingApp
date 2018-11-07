@@ -83,13 +83,17 @@ public class MainActivity extends AppCompatActivity {
                     boolean foundNote = false;
                     for(int i = 0; i < notes.size(); ++i) {
                         if(notes.get(i).getId() == returnedNote.getId()) {
-                            notes.add(i, returnedNote);
+                            // this created a bug with an infinite loop, with each loop,
+                            // an element is inserted into the beginning of the arraylist
+//                            notes.add(i, returnedNote);
+                            notes.set(i, returnedNote);
                             foundNote = true;
                         }
                     }
                     if(!foundNote) {
                         notes.add(returnedNote);
                     }
+                    refreshListView();
                 }
             }
         }

@@ -26,19 +26,27 @@ public class EditActivity extends AppCompatActivity {
         if(note == null) {
             note = new Note(Note.NO_ID);
         }
+
+        // here we grabbed the note but didn't use it to populate the ui
+        editTitle.setText(note.getTitle());
+        editContent.setText(note.getContent());
     }
 
     @Override
     public void onBackPressed() {
+        // must set result here
         prepResult();
-        finish();
+        super.onBackPressed();
     }
 
-    @Override
+    // setting result in onPause doesn't work because the result code is set to 0 before
+    // finish() is called, and finish() is called before onPause() is called
+    /*@Override
     protected void onPause() {
         super.onPause();
         prepResult();
-    }
+    }*/
+
 
     private void prepResult() {
         note.setTitle(editTitle.getText().toString());
