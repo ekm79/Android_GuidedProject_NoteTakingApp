@@ -4,4 +4,4 @@
 * Chance Payne
 * Erin Meredith
 * Leeroy Jenkins
-*Josh Halvorson
+* Josh Halvorson
